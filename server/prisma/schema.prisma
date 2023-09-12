@@ -1,0 +1,31 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url = env("DATABASE_URL")
+}
+
+enum Preferred_language {
+    english
+    spanish
+    french
+    german
+}
+
+enum How_found {
+    friends
+    online_search
+    advertisement
+}
+
+model Response {
+    id                          Int     @id @default(autoincrement())
+    full_name                   String
+    phone_number                String
+    start_date                  DateTime?
+    preferred_language          Preferred_language 
+    how_found                   How_found
+    newsletter_subscription     Boolean @default(false)
+}
