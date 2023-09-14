@@ -11,11 +11,9 @@ export default async function createResponseHelper(data: {
     newsletter_subscription: boolean
 }) {
     try {
-        console.log("llege al helper):");
         const newResponse = await prisma.response.create({
             data: data
         });
-        console.log("Nuevo entry: ", newResponse);
         if (newResponse) return newResponse;
 
     } catch (error) {
