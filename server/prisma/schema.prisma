@@ -8,16 +8,16 @@ datasource db {
 }
 
 enum Preferred_language {
-    english
-    spanish
-    french
-    german
+    ENGLISH
+    SPANISH
+    FRENCH
+    GERMAN
 }
 
 enum How_found {
-    friends
-    online_search
-    advertisement
+    FRIENDS
+    ONLINE_SEARCH
+    ADVERTISEMENT
 }
 
 model Response {
